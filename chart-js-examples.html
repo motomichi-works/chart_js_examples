@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <style>
+      .chart-wrapper {
+        height: 360px;
+        padding: 16px 8px;
+        background-color: #f4f4f4;
+        border: 1px solid #dddddd;
+      }
+
+      @media screen and (min-width: 992px) {
+        .chart-wrapper {
+            height: 680px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="chart-wrapper">
+      <!-- タイトルの左にアイコン付けたいとかデザイン的な理由でここに( title )入れても良い -->
+      <canvas id="bar-chart-example"></canvas>
+    </section>
+
+    <!-- cdn から chart.js を読み込む -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
+    <!-- 自作のプラグインを読み込む -->
+    <script src="./chartjs-plugin-total-labels.js"></script>
+
+    <!-- bar-chart-example.js -->
+    <script src="./bar-chart-example.js"></script>
+  </body>
+</html>
